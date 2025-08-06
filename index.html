@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Económico - [Tu Nombre]</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #1a5276;
+            color: white;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo img {
+            max-height: 80px;
+            vertical-align: middle;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: #f1c40f;
+        }
+
+        section {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        #inicio {
+            background: #f4f4f4;
+            padding-top: 3rem;
+        }
+
+        #servicios, #contacto {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1, h2 {
+            margin-bottom: 1rem;
+        }
+
+        .servicios-lista {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .servicio {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 5px;
+            width: 200px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        input, textarea {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background: #1a5276;
+            color: white;
+            border: none;
+            padding: 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #154360;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #111;
+            color: #fff;
+        }
+
+        /* WhatsApp Floating Button Styles */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-float img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .servicio {
+                width: 100%;
+            }
+
+            .whatsapp-float img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./img/logo.png" alt="Logo" onerror="this.outerHTML='[Tu Logo]'">
+            </div>
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <h1>Servicios Profesionales a Bajo Costo</h1>
+        <p>Hola, soy Diego. Ofrezco soluciones para tu profesión a precios accesibles para que todos puedan tener presencia online.</p>
+    </section>
+
+    <section id="servicios">
+        <h2>Mis Servicios</h2>
+        <p>Calidad profesional a precios que se ajustan a tu presupuesto.</p>
+        <div class="servicios-lista">
+            <div class="servicio">
+                <h3>Sitio Web Básico</h3>
+                <p>Desde U$s50 - Página sencilla y funcional.</p>
+            </div>
+            <div class="servicio">
+                <h3>Diseño Personalizado</h3>
+                <p>Desde U$s80 - Diseño único para tu marca.</p>
+            </div>
+            <div class="servicio">
+                <h3>Mantenimiento Web</h3>
+                <p>Desde U$s25/mes - Actualizaciones y soporte.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contáctame</h2>
+        <p>¿Listo para empezar? Escríbeme y hagamos realidad tu proyecto.</p>
+        <form id="contacto-form">
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <textarea id="mensaje" placeholder="Cuéntame sobre tu proyecto" rows="4" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div>
+            <p>Desarrollado por <strong>Diego</strong></p>
+            <p class="text-sm">© <span id="current-year"></span> Todos los derechos protegidos</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/+5491122334455" target="_blank" class="whatsapp-float" aria-label="Contacta con nosotros por WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <script>
+        document.getElementById('contacto-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const mensaje = document.getElementById('mensaje').value;
+            alert(`Gracias ${nombre}! Recibí tu mensaje: ${mensaje}. Te contactaré pronto a ${email}.`);
+            this.reset();
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            alert('El código fuente está protegido. Contacta al desarrollador para más información.');
+        });
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
